@@ -6,9 +6,15 @@ function App() {
   const [head, setHead] = useState('')
   const [shirt, setShirt] = useState('')
   const [bottom, setBottom] = useState('')
+  const [newCatchphrase, setNewCatchphrase] = useState('')
+  const [catchphrases, setCatchphrases] = useState([])
+
+  const handleClick = () => {
+    setCatchphrases = (prevState) => [...prevState, newCatchphrase]
+  }
 
   return (
-    <div className="App">
+    <article className="App">
       <Editor
         hat={hat}
         onHatChange={hat}
@@ -18,10 +24,12 @@ function App() {
         onShirtChange={setShirt}
         bottom={bottom}
         onBottomChange={setBottom}
+        newCatchphrase={newCatchphrase}
+        setNewCatchphrase={setNewCatchphrase}
       />
-      <Character />
-      <CatchPhraseDisplay />
-    </div>
+      <CatchPhraseDisplay catchphrases={catchphrases} />
+      <Character hat={hat} head={head} shirt={shirt} bottom={bottom} />
+    </article>
   )
 }
 
