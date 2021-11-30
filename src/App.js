@@ -1,26 +1,26 @@
 import './App.css'
 import React, { useState } from 'react'
-import Editor from './components/Editor/Editor'
+import Picker from './components/Picker/Picker'
 import CatchPhraseDisplay from './components/CatchPhraseDisplay/CatchPhraseDisplay'
 import Character from './components/Character/Character'
 
 function App() {
-  const [hat, setHat] = useState('')
-  const [head, setHead] = useState('')
-  const [shirt, setShirt] = useState('')
-  const [bottom, setBottom] = useState('')
+  const [hat, setHat] = useState('trucker')
+  const [head, setHead] = useState('otter')
+  const [shirt, setShirt] = useState('fishing')
+  const [bottom, setBottom] = useState('kilt')
   const [newCatchphrase, setNewCatchphrase] = useState('')
   const [catchphrases, setCatchphrases] = useState([])
 
   const handleClick = () => {
-    setCatchphrases = (prevState) => [...prevState, newCatchphrase]
+    setCatchphrases((prevState) => [...prevState, newCatchphrase])
   }
 
   return (
     <article className="App">
-      <Editor
+      <Picker
         hat={hat}
-        onHatChange={hat}
+        onHatChange={setHat}
         head={head}
         onHeadChange={setHead}
         shirt={shirt}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Character() {
+export default function Character({ hat, head, shirt, bottom }) {
   return (
     <section>
       <article
@@ -8,7 +8,8 @@ export default function Character() {
         style={{
           backgroundImage: `url(./${hat}-hat.png)`,
           height: 150,
-          backgroundSize: 'cover',
+          //   width: 150,
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
       ></article>
@@ -18,7 +19,8 @@ export default function Character() {
         style={{
           backgroundImage: `url(./${head}-head.png)`,
           height: 150,
-          backgroundSize: 'cover',
+          //   width: 150,
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
       ></article>
@@ -27,8 +29,9 @@ export default function Character() {
         className="shirt"
         style={{
           backgroundImage: `url(./${shirt}-shirt.png)`,
-          height: 150,
-          backgroundSize: 'cover',
+          height: 200,
+          //   width: 150,
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
       ></article>
@@ -37,8 +40,9 @@ export default function Character() {
         className="bottom"
         style={{
           backgroundImage: `url(./${bottom}-bottom.png)`,
-          height: 150,
-          backgroundSize: 'cover',
+          height: 230,
+          //   width: 150,
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
       ></article>

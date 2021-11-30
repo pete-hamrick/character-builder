@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Editor({
+export default function Picker({
   hat,
   onHatChange,
   head,
