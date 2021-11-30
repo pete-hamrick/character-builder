@@ -1,5 +1,8 @@
 import './App.css'
 import { useState } from 'react'
+import Editor from './components/Picker/Editor'
+import CatchPhraseDisplay from './components/CatchPhraseDisplay/CatchPhraseDisplay'
+import Character from './components/Character/Character'
 
 function App() {
   const [hat, setHat] = useState('')
@@ -26,6 +29,7 @@ function App() {
         onBottomChange={setBottom}
         newCatchphrase={newCatchphrase}
         setNewCatchphrase={setNewCatchphrase}
+        handleClick={handleClick}
       />
       <CatchPhraseDisplay catchphrases={catchphrases} />
       <Character hat={hat} head={head} shirt={shirt} bottom={bottom} />
