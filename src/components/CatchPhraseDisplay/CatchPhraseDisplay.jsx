@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function CatchPhraseDisplay() {
+export default function CatchPhraseDisplay({ catchphrases }) {
   return (
-    <Section>
-      <h1>Catch Phrases go here</h1>
-    </Section>
+    <section>
+      {catchphrases.map((catchphrase) => (
+        <p key={catchphrase}>{catchphrase}</p>
+      ))}
+    </section>
   )
 }

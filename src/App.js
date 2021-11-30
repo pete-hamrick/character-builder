@@ -1,6 +1,6 @@
 import './App.css'
-import { useState } from 'react'
-import Editor from './components/Picker/Editor'
+import React, { useState } from 'react'
+import Editor from './components/Editor/Editor'
 import CatchPhraseDisplay from './components/CatchPhraseDisplay/CatchPhraseDisplay'
 import Character from './components/Character/Character'
 
