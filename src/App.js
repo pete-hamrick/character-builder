@@ -11,6 +11,10 @@ function App() {
   const [bottom, setBottom] = useState('kilt')
   const [newCatchphrase, setNewCatchphrase] = useState('')
   const [catchphrases, setCatchphrases] = useState([])
+  const [hatCount, setHatCount] = useState(0)
+  const [headCount, setHeadCount] = useState(0)
+  const [shirtCount, setShirtCount] = useState(0)
+  const [bottomCount, setBottomCount] = useState(0)
 
   const handleClick = () => {
     setCatchphrases((prevState) => [...prevState, newCatchphrase])
@@ -31,7 +35,13 @@ function App() {
         setNewCatchphrase={setNewCatchphrase}
         handleClick={handleClick}
       />
-      <CatchPhraseDisplay catchphrases={catchphrases} />
+      <CatchPhraseDisplay
+        catchphrases={catchphrases}
+        hatCount={hatCount}
+        headCount={headCount}
+        shirtCount={shirtCount}
+        bottomCount={bottomCount}
+      />
       <Character hat={hat} head={head} shirt={shirt} bottom={bottom} />
     </article>
   )
