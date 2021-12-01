@@ -1,4 +1,5 @@
 import React from 'react'
+import './CatchPhraseDisplay.css'
 
 export default function CatchPhraseDisplay({
   catchphrases,
@@ -16,7 +17,10 @@ export default function CatchPhraseDisplay({
         classic catchphrases:
       </p>
       {catchphrases.map((catchphrase) => (
-        <p key={catchphrase}>{catchphrase}</p>
+        <>
+          <span key={catchphrase}>{catchphrase}</span>
+          <br></br>
+        </>
       ))}
     </section>
   )
