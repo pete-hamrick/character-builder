@@ -22,27 +22,40 @@ function App() {
 
   return (
     <article className="App">
-      <Picker
-        hat={hat}
-        onHatChange={setHat}
-        head={head}
-        onHeadChange={setHead}
-        shirt={shirt}
-        onShirtChange={setShirt}
-        bottom={bottom}
-        onBottomChange={setBottom}
-        newCatchphrase={newCatchphrase}
-        setNewCatchphrase={setNewCatchphrase}
-        handleClick={handleClick}
-      />
-      <CatchPhraseDisplay
-        catchphrases={catchphrases}
-        hatCount={hatCount}
-        headCount={headCount}
-        shirtCount={shirtCount}
-        bottomCount={bottomCount}
-      />
-      <Character hat={hat} head={head} shirt={shirt} bottom={bottom} />
+      <section className="left">
+        <Picker
+          hat={hat}
+          onHatChange={setHat}
+          hatCount={hatCount}
+          updateHatCount={setHatCount}
+          head={head}
+          onHeadChange={setHead}
+          headCount={headCount}
+          updateHeadCount={setHeadCount}
+          shirt={shirt}
+          onShirtChange={setShirt}
+          shirtCount={shirtCount}
+          updateShirtCount={setShirtCount}
+          bottom={bottom}
+          onBottomChange={setBottom}
+          bottomCount={bottomCount}
+          updateBottomCount={setBottomCount}
+          newCatchphrase={newCatchphrase}
+          setNewCatchphrase={setNewCatchphrase}
+          handleClick={handleClick}
+        />
+        <CatchPhraseDisplay
+          catchphrases={catchphrases}
+          hatCount={hatCount}
+          headCount={headCount}
+          shirtCount={shirtCount}
+          bottomCount={bottomCount}
+        />
+      </section>
+
+      <section className="right">
+        <Character hat={hat} head={head} shirt={shirt} bottom={bottom} />
+      </section>
     </article>
   )
 }

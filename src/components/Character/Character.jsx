@@ -1,9 +1,10 @@
 import React from 'react'
+import './Character.css'
 
 export default function Character({ hat, head, shirt, bottom }) {
   return (
-    <section>
-      <article
+    <article className="character">
+      <section
         className="hat"
         style={{
           backgroundImage: `url(./${hat}-hat.png)`,
@@ -12,9 +13,9 @@ export default function Character({ hat, head, shirt, bottom }) {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
-      ></article>
+      ></section>
 
-      <article
+      <section
         className="head"
         style={{
           backgroundImage: `url(./${head}-head.png)`,
@@ -23,9 +24,9 @@ export default function Character({ hat, head, shirt, bottom }) {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
-      ></article>
+      ></section>
 
-      <article
+      <section
         className="shirt"
         style={{
           backgroundImage: `url(./${shirt}-shirt.png)`,
@@ -34,9 +35,9 @@ export default function Character({ hat, head, shirt, bottom }) {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
-      ></article>
+      ></section>
 
-      <article
+      <section
         className="bottom"
         style={{
           backgroundImage: `url(./${bottom}-bottom.png)`,
@@ -45,7 +46,7 @@ export default function Character({ hat, head, shirt, bottom }) {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
-      ></article>
-    </section>
+      ></section>
+    </article>
   )
 }

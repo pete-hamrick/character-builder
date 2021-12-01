@@ -1,14 +1,23 @@
 import React from 'react'
+import './Picker.css'
 
 export default function Picker({
   hat,
   onHatChange,
+  hatCount,
+  updateHatCount,
   head,
   onHeadChange,
+  headCount,
+  updateHeadCount,
   shirt,
   onShirtChange,
+  shirtCount,
+  updateShirtCount,
   bottom,
   onBottomChange,
+  bottomCount,
+  updateBottomCount,
   newCatchphrase,
   setNewCatchphrase,
   handleClick,
@@ -18,11 +27,31 @@ export default function Picker({
   const shirtPics = ['fishing', 'tuxedo']
   const bottomPics = ['kilt', 'yeti']
 
+  const handleHatChange = (value) => {
+    onHatChange(value)
+    updateHatCount(++hatCount)
+  }
+
+  const handleHeadChange = (value) => {
+    onHeadChange(value)
+    updateHeadCount(++headCount)
+  }
+
+  const handleShirtChange = (value) => {
+    onShirtChange(value)
+    updateShirtCount(++shirtCount)
+  }
+
+  const handleBottomChange = (value) => {
+    onBottomChange(value)
+    updateBottomCount(++bottomCount)
+  }
+
   return (
-    <section>
+    <section className="container">
       <label>
         Hat:
-        <select value={hat} onChange={(e) => onHatChange(e.target.value)}>
+        <select value={hat} onChange={(e) => handleHatChange(e.target.value)}>
           {hatPics.map((pic) => (
             <option key={pic}>{pic}</option>
           ))}
@@ -31,7 +60,7 @@ export default function Picker({
 
       <label>
         Head:
-        <select value={head} onChange={(e) => onHeadChange(e.target.value)}>
+        <select value={head} onChange={(e) => handleHeadChange(e.target.value)}>
           {headPics.map((pic) => (
             <option key={pic}>{pic}</option>
           ))}
@@ -40,7 +69,7 @@ export default function Picker({
 
       <label>
         Shirt:
-        <select value={shirt} onChange={(e) => onShirtChange(e.target.value)}>
+        <select value={shirt} onChange={(e) => handleShirtChange(e.target.value)}>
           {shirtPics.map((pic) => (
             <option key={pic}>{pic}</option>
           ))}
@@ -49,7 +78,7 @@ export default function Picker({
 
       <label>
         Bottom:
-        <select value={bottom} onChange={(e) => onBottomChange(e.target.value)}>
+        <select value={bottom} onChange={(e) => handleBottomChange(e.target.value)}>
           {bottomPics.map((pic) => (
             <option key={pic}>{pic}</option>
           ))}
