@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ought to display the CatchPhrase component 1`] = `
+<div>
+  <section>
+    <p>
+      You have changed the hat 
+      1 time
+      , the head
+       
+      1 time
+      , the shirt 
+      1 time
+      , and the bottom 
+      1 time
+      . Of course, no one can forget your characters classic catchphrases:
+    </p>
+    <span>
+      oh yeah
+    </span>
+    <br />
+    <span>
+      beautiful
+    </span>
+    <br />
+  </section>
+</div>
+`;

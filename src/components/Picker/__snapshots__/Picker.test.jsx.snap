@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display the Picker component 1`] = `
+<div>
+  <section
+    class="container"
+  >
+    <label>
+      Hat:
+      <select>
+        <option>
+          beanie
+        </option>
+        <option>
+          derby
+        </option>
+        <option>
+          fishing
+        </option>
+        <option>
+          trucker
+        </option>
+      </select>
+    </label>
+    <label>
+      Head:
+      <select>
+        <option>
+          bear
+        </option>
+        <option>
+          fish
+        </option>
+        <option>
+          otter
+        </option>
+        <option>
+          sloth
+        </option>
+      </select>
+    </label>
+    <label>
+      Shirt:
+      <select>
+        <option>
+          fishing
+        </option>
+        <option>
+          tuxedo
+        </option>
+      </select>
+    </label>
+    <label>
+      Bottom:
+      <select>
+        <option>
+          kilt
+        </option>
+        <option>
+          yeti
+        </option>
+      </select>
+    </label>
+    <label>
+      New Catchphrases:
+      <input
+        type="text"
+        value=""
+      />
+    </label>
+    <button
+      type="button"
+    >
+      Add Catchphrase
+    </button>
+  </section>
+</div>
+`;
