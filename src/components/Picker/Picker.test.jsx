@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import Picker from './Picker.jsx'
+import React from 'react'
 
 it('should display the Picker component', () => {
   const { container } = render(<Picker />)

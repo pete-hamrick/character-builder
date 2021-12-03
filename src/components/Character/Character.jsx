@@ -13,6 +13,7 @@ export default function Character({ hat, head, shirt, bottom }) {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
+        aria-label={hat}
       ></section>
 
       <section
@@ -24,6 +25,7 @@ export default function Character({ hat, head, shirt, bottom }) {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
+        aria-label={head}
       ></section>
 
       <section
@@ -35,6 +37,7 @@ export default function Character({ hat, head, shirt, bottom }) {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
+        aria-label={shirt}
       ></section>
 
       <section
@@ -46,6 +49,7 @@ export default function Character({ hat, head, shirt, bottom }) {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
+        aria-label={bottom}
       ></section>
     </article>
   )
